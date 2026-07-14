@@ -1,0 +1,20 @@
+
+{
+  "criteria": {
+    "click_wand": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": {
+              "GravityWand": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "gravity_beam:wand_click"
+  }
+}

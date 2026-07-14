@@ -1,0 +1,29 @@
+{
+  "description": "Helper Push",
+  "supported_items": "#minecraft:enchantable/vanished",
+  "weight": 1,
+  "max_level": 1,
+  "min_cost": { "base": 1, "per_level": 1 },
+  "max_cost": { "base": 1, "per_level": 1 },
+  "anvil_cost": 1,
+  "slots": [ "mainhand" ],
+  "effects": {
+    "minecraft:tick": [
+      {
+        "effect": {
+          "type": "minecraft:apply_impulse",
+          "direction": [0.0, 1.0, 1.5],
+          "coordinate_scale": [1.0, 1.0, 1.0],
+          "magnitude": 1.0
+        },
+        "requirements": {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "nbt": "{Tags:[\"trigger_push\"]}"
+          }
+        }
+      }
+    ]
+  }
+}
