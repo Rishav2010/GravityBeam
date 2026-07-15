@@ -31,4 +31,4 @@ scoreboard objectives add math dummy
 
 
 #testing stuff
-scoreboard objectives setdisplay sidebar mode
+scoreboard objectives setdisplay sidebar

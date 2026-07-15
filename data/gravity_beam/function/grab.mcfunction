@@ -8,10 +8,11 @@ execute as @a[tag=Owner,predicate=gravity_beam:sneaks] run scoreboard players se
 execute as @a[tag=Owner,predicate=gravity_beam:right_left] run scoreboard players set #held Temp -1
 scoreboard players operation @s HeldDistance -= #held Temp
 execute if score @s HeldDistance matches 31.. run scoreboard players set @s HeldDistance 30
-
+execute if score @s HeldDistance matches ..-1 run scoreboard players set @s HeldDistance 0
 #cleanup
 tag @a[tag=Owner,limit=1] remove Owner
 
+effect give @s glowing 1 1 true
 
 #checks the held distance and tps that amount
 execute if score @s HeldDistance matches 1 run tp @s ^ ^ ^1
